@@ -3,11 +3,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="content_main px-3 h-full mx-auto border-l border-r border-solid border-gray-700">
-    <div class="h-full w-small text-gray-100 bg-gray-800">
+  <div class="
+    content_main px-3 mx-auto
+{#    bg-gray-800#}
+    bg-base
+    border-l border-r border-solid border-gray-700"
+  >
+    <div class="h-full w-small text-gray-300">
 
       <div class="py-5 border-b border-gray-700">
-        <h1 class="font-semibold text-3xl text-yellow-200">ADP Timesheet Helper</h1>
+        <h1 class="font-semibold text-3xl text-yellow-500">ADP Timesheet Helper</h1>
 
         <p>
           A browser extension to make filling out ADP timesheets a little less
@@ -15,21 +20,23 @@
           (Currently supports importing tab-separated or comma-separated values)
         </p>
 
-        <div class="video_container w-fit mx-auto border border-gray-700 shadow">
-          <video controls width="600">
-            <source src="./videos/2024-01-06_19-17-39_adp-timesheet-helper-demo-2.mp4" type="video/mp4"/>
-          </video>
+        <h2 class="font-semibold text-2xl text-yellow-500">Installation</h2>
+        <div class="my-5 flex flex-row gap-8 justify-center">
+          <a class="btn btn-blue">
+            <img class="w-10 mr-2 invert" src="./images/googlechrome.svg" aria-hidden="true" alt="chrome-icon"/>
+            <span class="text-gray-300 whitespace-pre">Get Extension for </span> Chrome
+          </a>
+          <a class="btn btn-blue">
+            <img class="w-10 mr-2 invert" src="./images/firefoxbrowser.svg" aria-hidden="true" alt="firefox-icon"/>
+            <span class="text-gray-300 whitespace-pre">Get Extension for </span> Firefox
+          </a>
         </div>
 
-        <div class="flex flex-row gap-8 justify-center">
-          <button class="btn btn-blue">
-            <img class="w-10 mr-2 invert" src="./images/googlechrome.svg" aria-hidden="true" alt="chrome-icon"/>
-            Get Extension for Chrome
-          </button>
-          <button class="btn btn-blue">
-            <img class="w-10 mr-2 invert" src="./images/firefoxbrowser.svg" aria-hidden="true" alt="firefox-icon"/>
-            Get Extension for Firefox
-          </button>
+        <h2 class="font-semibold text-2xl text-yellow-500">Demo & Usage</h2>
+        <div class="mt-3 video_container w-fit mx-auto border border-gray-700 shadow rounded-lg">
+          <video controls width="600" class="rounded-lg">
+            <source src="./videos/2024-01-06_19-17-39_adp-timesheet-helper-demo-2.mp4" type="video/mp4"/>
+          </video>
         </div>
 
         <p>

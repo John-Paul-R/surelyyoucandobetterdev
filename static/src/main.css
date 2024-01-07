@@ -4,23 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    --jp-bg-color: #111520;
+    --jp-bg-base-color: hsla(215, 18%, 13%, 1);
+    --start: rgba(31, 41, 55, 1);
+}
+
+.bg-base {
+    background-color: var(--jp-bg-base-color);
+}
+
 .content_main {
     width: 1024px;
     box-sizing: border-box;
 }
 
 .btn {
-    @apply font-bold py-2 px-4 rounded;
+    @apply font-bold py-2 px-4 rounded-2xl;
     display: inline-flex;
     align-items: center;
 }
 
 .btn-blue {
-    @apply bg-blue-500 text-white;
+    /*bg-blue-300*/
+    @apply bg-transparent
+    border border-gray-700
+    text-white
+    transition duration-200
+    ;
 }
 
 .btn-blue:hover {
-    @apply bg-blue-700;
+    /*@apply bg-blue-700;*/
+    @apply border border-gray-300;
+    box-shadow: 0 0 0.5rem #53a1b3;
+    text-decoration: underline;
 }
 
 .invert {
