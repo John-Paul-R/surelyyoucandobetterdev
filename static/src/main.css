@@ -15,7 +15,8 @@ html {
 }
 
 .content_main {
-    width: 1024px;
+    width: min(1024px, 100%);
+    min-height: 100%;
     box-sizing: border-box;
 }
 
