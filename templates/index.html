@@ -3,30 +3,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="w-small w-2/3 mx-auto py-10 text-gray-600">
-  <input
-    type="text"
-    name="search"
-    hx-post="/search"
-    hx-trigger="keyup changed delay:250ms"
-    hx-indicator=".htmx-indicator"
-    hx-target="#todo-results"
-    placeholder="Search"
-    class="bg-white h-10 px-5 pr-10 rounded-full text-2xl focus:outline-none"
-  >
-  <span class="htmx-indicator">Searching...</span>
-</div>
+  <div class="content_main px-3 h-full mx-auto border-l border-r border-solid border-gray-700">
+    <div class="h-full w-small text-gray-100 bg-gray-800">
 
-<table class="border-collapse w-small w-2/3 mx-auto">
-  <thead>
-    <tr>
-      <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">#</th>
-      <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Title</th>
-      <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Completed</th>
-    </tr>
-  </thead>
-  <tbody id="todo-results">
-    {% include 'todo.html' %}
-  </tbody>
-</table>
+      <div class="py-5 border-b border-gray-700">
+        <h1 class="font-semibold text-3xl text-yellow-200">ADP Timesheet Helper</h1>
+
+        <p>
+          A browser extension to make filling out ADP timesheets a little less
+          headache inducing, by allowing importing data from spreadsheets.
+          (Currently supports importing tab-separated or comma-separated values)
+        </p>
+
+        <div class="video_container w-fit mx-auto border border-gray-700 shadow">
+          <video controls width="600">
+            <source src="./videos/2024-01-06_19-17-39_adp-timesheet-helper-demo-2.mp4" type="video/mp4"/>
+          </video>
+        </div>
+
+        <div class="flex flex-row gap-8 justify-center">
+          <button class="btn btn-blue">
+            <img class="w-10 mr-2 invert" src="./images/googlechrome.svg" aria-hidden="true" alt="chrome-icon"/>
+            Get Extension for Chrome
+          </button>
+          <button class="btn btn-blue">
+            <img class="w-10 mr-2 invert" src="./images/firefoxbrowser.svg" aria-hidden="true" alt="firefox-icon"/>
+            Get Extension for Firefox
+          </button>
+        </div>
+
+        <p>
+          "ADP Timesheet Helper" is not endorsed by, directly affiliated with,
+          maintained, authorized, or sponsored by ADP.
+        </p>
+      </div>
+
+    </div>
+  </div>
 {% endblock content %}
