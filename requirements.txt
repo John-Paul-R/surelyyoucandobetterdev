@@ -2,3 +2,4 @@ Flask==3.0.0
 Flask-Assets==2.1.0
 pytailwindcss==0.2.0
 Werkzeug==3.0.1
+pyuwsgi==2.0.23

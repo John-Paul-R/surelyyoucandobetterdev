@@ -29,7 +29,7 @@ Check out the [post](https://testdriven.io/blog/flask-htmx-tailwind/).
 1. Scan the templates and generate CSS file:
 
     ```sh
-    (venv)$ tailwindcss -i ./static/src/main.css -o ./static/dist/main.css --minify
+    (venv)$ tailwindcss -i ./static/flask_src/main.css -o ./static/dist/main.css --minify
     ```
 
 1. Run the app:

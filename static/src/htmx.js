@@ -1982,7 +1982,7 @@ return (function () {
             if(elt.name === "" || elt.name == null || elt.disabled) {
                 return false;
             }
-            // ignore "submitter" types (see jQuery src/serialize.js)
+            // ignore "submitter" types (see jQuery flask_src/serialize.js)
             if (elt.type === "button" || elt.type === "submit" || elt.tagName === "image" || elt.tagName === "reset" || elt.tagName === "file" ) {
                 return false;
             }

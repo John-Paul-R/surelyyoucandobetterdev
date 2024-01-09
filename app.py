@@ -5,7 +5,7 @@ import re
 from flask import Flask, render_template, request, Blueprint, send_from_directory
 from flask_assets import Bundle, Environment
 
-from todo import todos
+from flask_src.todo import todos
 
 core = Blueprint("core", __name__)
 
